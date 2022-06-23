@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound_Animal_aPP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin-top: 10vh;
+            padding: 20px;
+            display: grid;
+            background-color: aqua;
+            grid-template-columns: repeat(3, 1fr);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 20px;
+        }
+
+        .container>img {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+
+        .section {
+            min-width: 568px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cricket {
+            background-color: whitesmoke;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+                margin-top: 37vh;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>
+            Animal Sound
+        </h1>
+    </center>
+    <div class="section">
+        <div class="container ">
+            <img src="./image/bird.jpg" id="bird" alt="">
+            <img src="./image/cat.png" id="cat" alt="">
+            <img src="./image/cricket.png" id="cricket" alt="">
+            <img src="./image/dog.jpg" id="dog" alt="">
+            <img src="./image/horsh.jpg" id="horse" alt="">
+            <img src="./image/hen.png" id="hen" alt="">
+            <img src="./image/lion.webp" id="lion" alt="">
+            <img src="./image/monkey.jpg" id="monkey" alt="">
+            <img src="./image/crow.png" id="crow" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    const bird = document.getElementById('bird');
+    const cat = document.getElementById('cat');
+    const cricket = document.getElementById('cricket');
+    const hen = document.getElementById('hen');
+    const dog = document.getElementById('dog');
+    const crow = document.getElementById('crow');
+    const horsh = document.getElementById('horse');
+    const lion = document.getElementById('lion');
+    const monkey = document.getElementById('monkey');
+    const birdMusic = new Audio('./sounds/bird.wav');
+    const catMusic = new Audio('./sounds/meow.wav');
+    const horseMusic = new Audio('./sounds/horsh.wav');
+    const cricketMusic = new Audio('./sounds/crikett.wav');
+    const dogMusic = new Audio('./sounds/dog.wav');
+    const crowMusic = new Audio('./sounds/crow.mp3');
+    const henMusic = new Audio('./sounds/cock.wav');
+    const lionMusic = new Audio('./sounds/lion.wav');
+    const MonkeyMusic = new Audio('./sounds/monkey.wav');
+    bird.addEventListener("click", () => {
+        catMusic.pause();
+        cricketMusic.pause();
+        dogMusic.pause();
+        henMusic.pause()
+        lionMusic.pause();
+        MonkeyMusic.pause();
+        birdMusic.play();
+    });
+
+    cat.addEventListener("click", () => {
+        birdMusic.pause();
+        cricketMusic.pause();
+        dogMusic.pause();
+        henMusic.pause()
+        lionMusic.pause();
+        MonkeyMusic.pause();
+        catMusic.play();
+    });
+
+    crow.addEventListener("click", () => {
+        birdMusic.pause();
+        cricketMusic.pause();
+        dogMusic.pause();
+        henMusic.pause()
+        lionMusic.pause();
+        MonkeyMusic.pause();
+        catMusic.pause();
+        crowMusic.play();
+    });
+
+    cricket.addEventListener("click", () => {
+        catMusic.pause();
+        dogMusic.pause();
+        henMusic.pause()
+        lionMusic.pause();
+        MonkeyMusic.pause();
+        birdMusic.pause();
+        cricketMusic.play();
+    });
+
+    dog.addEventListener("click", () => {
+        catMusic.pause();
+        cricketMusic.pause();
+        henMusic.pause()
+        lionMusic.pause();
+        MonkeyMusic.pause();
+        birdMusic.pause();
+        dogMusic.play();
+    });
+
+    hen.addEventListener("click", () => {
+        catMusic.pause();
+        cricketMusic.pause();
+        dogMusic.pause();
+        lionMusic.pause();
+        MonkeyMusic.pause();
+        birdMusic.pause();
+        henMusic.play();
+    });
+
+    lion.addEventListener("click", () => {
+        catMusic.pause();
+        cricketMusic.pause();
+        dogMusic.pause();
+        henMusic.pause()
+        MonkeyMusic.pause();
+        birdMusic.pause();
+        lionMusic.play();
+    });
+
+    monkey.addEventListener("click", () => {
+        catMusic.pause();
+        cricketMusic.pause();
+        dogMusic.pause();
+        henMusic.pause()
+        lionMusic.pause();
+        birdMusic.pause();
+        MonkeyMusic.play();
+    });
+
+    horsh.addEventListener("click", () => {
+        catMusic.pause();
+        cricketMusic.pause();
+        dogMusic.pause();
+        henMusic.pause()
+        lionMusic.pause();
+        birdMusic.pause();
+        MonkeyMusic.pause();
+        horseMusic.play();
+    });
+
+
+</script>
+
+</html>
